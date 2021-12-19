@@ -1,5 +1,5 @@
 module "l3-network" {
-  source = "github.com/kalenarndt/terraform-unifi-unifi-network"
+  source = "kalenarndt/unifi-network/unifi"
 
   network = {
     "cts-app1" = {

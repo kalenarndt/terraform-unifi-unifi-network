@@ -11,4 +11,5 @@ resource "unifi_network" "network" {
   dhcp_lease    = each.value.dhcp_lease != null ? each.value.dhcp_lease : null
   site          = each.value.site != null ? each.value.site : "default"
   network_group = each.value.network_group != null ? each.value.network_group : null
+  wan_gateway   = "0.0.0.0" # Work around for invalid payload issue when creating networks
 }
